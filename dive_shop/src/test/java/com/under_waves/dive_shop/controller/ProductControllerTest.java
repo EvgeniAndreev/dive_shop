@@ -1,9 +1,6 @@
 package com.under_waves.dive_shop.controller;
 
-import com.under_waves.dive_shop.dto.ImageDto;
-import com.under_waves.dive_shop.dto.ManufacturerDto;
 import com.under_waves.dive_shop.dto.ProductDto;
-import com.under_waves.dive_shop.service.ManufacturerServiceImpl;
 import com.under_waves.dive_shop.service.ProductServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -16,7 +13,6 @@ import java.util.HashSet;
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.core.Is.is;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;

@@ -1,7 +1,6 @@
 package com.under_waves.dive_shop.controller;
 
 import com.under_waves.dive_shop.dto.ImageDto;
-import com.under_waves.dive_shop.model.Image;
 import com.under_waves.dive_shop.service.ImageServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
