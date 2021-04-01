@@ -41,6 +41,7 @@ public class Product {
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "manufacturer_id", nullable = false)
     private Manufacturer manufacturer;
 
     @JsonBackReference
