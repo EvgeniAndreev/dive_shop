@@ -60,7 +60,7 @@ public class ProductTypeServiceImpl implements ProductTypeService {
             ProductType savedType = productTypeRepository.save(productType);
             return modelMapper.map(savedType, ProductTypeDto.class);
         } catch (DataIntegrityViolationException exception) {
-            throw new DuplicateRecordException("Product already exists.");
+            throw new DuplicateRecordException("Product type already exists.");
         }
     }
 

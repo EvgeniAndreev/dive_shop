@@ -31,13 +31,13 @@ public class ManufacturerController {
         return ResponseEntity.ok(manufacturerService.findById(id));
     }
 
-    @GetMapping(value = "/name/{name}")
+    @GetMapping(value = "/find/{name}")
     public ResponseEntity<ManufacturerDto> findByName(@PathVariable String name) {
         return ResponseEntity.ok(manufacturerService.findByName(name));
     }
 
     @PostMapping
-    ResponseEntity<ManufacturerDto> save(@RequestBody @Valid ManufacturerDto manufacturerDto) {
+    public ResponseEntity<ManufacturerDto> save(@RequestBody @Valid ManufacturerDto manufacturerDto) {
         ManufacturerDto savedManufacturer = manufacturerService.save(manufacturerDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedManufacturer);
     }
