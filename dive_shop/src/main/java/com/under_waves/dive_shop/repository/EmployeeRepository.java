@@ -13,6 +13,10 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     @Query(value = "SELECT e * FROM Employee e WHERE e.email = ?1")
     Optional<Employee> findByEmail(String email);
 
-    @Query(value = "DELETE FROM employees WHERE id = ?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM employees WHERE ucn = ?1", nativeQuery = true)
+    Optional<Employee> findByUcn(String phoneNumber);
+
+    void deleteByUcn(String ucn);
+
     void deleteByEmail(String email);
 }
